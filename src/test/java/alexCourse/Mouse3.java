@@ -1,7 +1,8 @@
 package alexCourse;
 
-public class Mouse3 {
-
+public class Mouse3 extends Mouse {
+static int year;
+static int year1 = 44;
     boolean ambite = true;
 
 

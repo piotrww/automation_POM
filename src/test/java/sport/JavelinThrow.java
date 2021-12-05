@@ -1,7 +1,5 @@
 package sport;
 
-import geometry_playground.Figures;
-
 public class JavelinThrow extends ParentPolishTeam implements SportsMethods {
 
   public int heartRateOfThisSportsMan;
@@ -16,10 +14,9 @@ public class JavelinThrow extends ParentPolishTeam implements SportsMethods {
 
 
   @Override
-    public int heartRateOfSportsMan() {
+    public void heartRateOfSportsMan() {
         super.heartRateOfSportsMan();
-        return heartRateOfThisSportsMan;
-    }
+  }
 
     @Override
     public int run() {

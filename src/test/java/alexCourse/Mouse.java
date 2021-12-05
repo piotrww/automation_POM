@@ -2,20 +2,23 @@ package alexCourse;
 
 public class Mouse {
 
-    public static void leftClick() {
+    public void leftClick() {
         System.out.println("left clicked");
     }
 
-    public static void rightClick() {
+    public void rightClick() {
         System.out.println("right clicked");
     }
 
-    public static void scroolUp() {
+    public void scroolUp() {
         System.out.println("scrolled up");
     }
 
-    public static void scroolDown() {
+    public void scroolDown() {
         System.out.println("scrolled down");
     }
+
+
+
 
 }
