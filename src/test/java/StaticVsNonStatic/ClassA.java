@@ -3,8 +3,6 @@ package StaticVsNonStatic;
 public class ClassA {
 
 
-    private static int mySum;
-    private static int myMultiplyOutput;
 
     //Static method
     public static void sum(int a, int b) {
