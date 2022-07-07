@@ -4,19 +4,35 @@ public class Main {
     public static void main(String[] args) {
      Mouse mouse = new Mouse();
      mouse.leftClick();
-     mouse.rightClick();
-     mouse.scroolUp();
 
-     String s = "test";
-     System.out.println(s);
+     Mouse1 mouse1 = new Mouse1();
+     mouse1.leftClick();
 
-     String s3 = new String("test2");
-     System.out.println(s3);
+     System.out.println("Mixed");
 
-         
-     Mouse1 myMouse1 = new Mouse1();
-     myMouse1.setShape("test shape");
-     Mouse1.setColor("color test red");
+     Mouse mouseMix = new Mouse1();
+     mouseMix.leftClick();
+
+   //  Mouse1 mouseMixB = new Mouse();
+  //   mouseMixB.leftClick();
+
+//     mouse.leftClick();
+//     mouse.rightClick();
+//     mouse.scroolUp();
+//
+//     String s = "test";
+//     System.out.println(s);
+//
+//     String s3 = new String("test2");
+//     System.out.println(s3);
+//
+//
+//     Mouse1 myMouse1 = new Mouse1();
+//     myMouse1.leftClick();
+//     myMouse1.leftClick();
+//
+//     myMouse1.setShape("test shape");
+//     Mouse1.setColor("color test red");
 
 
     }

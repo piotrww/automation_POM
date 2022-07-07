@@ -3,7 +3,7 @@ package alexCourse;
 public class Mouse {
 
     public void leftClick() {
-        System.out.println("left clicked");
+        System.out.println("left clicked by the parent");
     }
 
     public void rightClick() {

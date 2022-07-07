@@ -1,6 +1,6 @@
 package abstractClassSuper;
 
-public class ShopProduct {
+public abstract class ShopProduct {
     double itemPrice;
     double taxOfItemPrice = 0.23;
 
