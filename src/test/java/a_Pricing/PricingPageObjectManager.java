@@ -1,21 +1,20 @@
 package a_Pricing;
 
 import org.openqa.selenium.WebDriver;
-import page.BookingHomePage;
 
 
-public class PageObjectManager {
+public class PricingPageObjectManager {
     private WebDriver driver;
-    private BookingHomePage bookingHomePage;
+    private PricingHomePage pricingHomePage;
 
 
-    public PageObjectManager(WebDriver driver) { //konstruktor
+    public PricingPageObjectManager(WebDriver driver) { //konstruktor
         this.driver = driver;
     }
 
-    public BookingHomePage getBookingHomePage() {
+    public PricingHomePage getPricingHomePage() {
 
-        return (bookingHomePage == null) ? bookingHomePage = new BookingHomePage(driver) : bookingHomePage; //Zamiast if.
+        return (pricingHomePage == null) ? pricingHomePage = new PricingHomePage(driver) : pricingHomePage; //Zamiast if.
 
         // to samo co wyżej
         //      if

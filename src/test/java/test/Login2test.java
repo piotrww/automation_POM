@@ -5,12 +5,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import page.BookingHomePage;
 import page.BookingHomePagesSectionTwo;
 import page.GoToGatePage;
 import page.PageObjectManager;
 
-import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
@@ -42,12 +40,12 @@ public class Login2test {
     @Test
 
     public void checkTextOfTheBar() {
-        assertEquals(pageObjectManager.getBookingHomePage().getBarText(), "Koronawirus (COVID-19) – wsparcie"); //obiekt, stworzony w 39 wierszu
+        assertEquals(pageObjectManager.getPricingHomePage().getBarText(), "Koronawirus (COVID-19) – wsparcie"); //obiekt, stworzony w 39 wierszu
     }
 
     @Test
     public void checkColorOfBackground() {
-        String colorCode = pageObjectManager.getBookingHomePage().getColorCode();
+        String colorCode = pageObjectManager.getPricingHomePage().getColorCode();
         System.out.println("Kolor div pobrany w metodzie (teście LoginTest): " + colorCode);
         assertEquals(colorCode, "rgb(51, 51, 51)");
     }
@@ -63,13 +61,13 @@ public class Login2test {
 //            System.out.println("Number of characters is correct");
 //        }
 
-        System.out.println(pageObjectManager.getBookingHomePage().getNumberOfCharactersInAlert() > 20 ? "Number of characters is correct" : "Incorrect");
+        System.out.println(pageObjectManager.getPricingHomePage().getNumberOfCharactersInAlert() > 20 ? "Number of characters is correct" : "Incorrect");
     }
 
     @Test
     public void checkIfMoreIsLink() {
 
-        assertTrue(pageObjectManager.getBookingHomePage().getMoreText().contains("booking.com/"));
+        assertTrue(pageObjectManager.getPricingHomePage().getMoreText().contains("booking.com/"));
 
 
 
@@ -84,7 +82,7 @@ public class Login2test {
 
     @Test
     public void checkSizeofAlertDiv() {
-       int x =  pageObjectManager.getBookingHomePage().checkSizeofAlertDiv();
+       int x =  pageObjectManager.getPricingHomePage().checkSizeofAlertDiv();
       //       BookingHomePage bookingHomePage = new BookingHomePage(driver);
      //     bookingHomePage.checkSizeofAlertDiv();
 
@@ -174,7 +172,7 @@ public class Login2test {
 
     @Test
     public void checkNumberOfPropertiesInCity() {
-        pageObjectManager.getBookingHomePage().getNumberOfProperties();
+        pageObjectManager.getPricingHomePage().getNumberOfProperties();
 
      //   BookingHomePage bookingHomePage = new BookingHomePage(driver);
     //    bookingHomePage.getNumberOfProperties();
@@ -184,7 +182,7 @@ public class Login2test {
 
     @Test
     public void gotoCarHireWithChaining() {
-        String textOfCarHirePageHeader = pageObjectManager.getBookingHomePage().goToCarHirePage().getTextOfCarHireButton();
+        String textOfCarHirePageHeader = pageObjectManager.getPricingHomePage().goToCarHirePage().getTextOfCarHireButton();
         
        // String textOfCarHirePageHeader = bookingHomePage.goToCarHirePage().getTextOfCarHireButton();
         System.out.println(textOfCarHirePageHeader);

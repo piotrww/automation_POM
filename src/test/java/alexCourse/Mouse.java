@@ -1,6 +1,7 @@
 package alexCourse;
 
 public class Mouse {
+    String texture1 = "MatteTest";
 
     public void leftClick() {
         System.out.println("left clicked by the parent");

@@ -11,7 +11,7 @@ public class PageObjectManager {
         this.driver = driver;
     }
 
-    public BookingHomePage getBookingHomePage() {
+    public BookingHomePage getPricingHomePage() {
 
             return (bookingHomePage == null) ? bookingHomePage = new BookingHomePage(driver) : bookingHomePage; //Zamiast if.
 
