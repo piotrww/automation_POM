@@ -25,6 +25,14 @@ public class BasePage {
     @FindBy(xpath = "//button[contains(text(),'Login')]")
     private WebElement loginButton;
 
+    @FindBy(css = "a#cantAccessAccount")
+    private WebElement loginPopUpTextLink;
+
+    @FindBy(css = "#i0116")
+    WebElement popupLoginEmail;
+
+    @FindBy(css = "input#idSIButton9")
+    WebElement loginNextButton;
 
 
 

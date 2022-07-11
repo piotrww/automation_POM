@@ -53,24 +53,28 @@ public class APricingTests {
         System.out.println("after wait");
 
 
-
-
-        // pricingHomePage = new PricingHomePage(driver);
+        String LoginText = pricingPageObjectManager.getPricingHomePage().getSignInTxt().trim();
+        System.out.println("login text: " + LoginText);
+        assertEquals(LoginText, "Sign in");
 
 
 
     }
 
 @Test
-    public void checkTextOfLoginPage()  {
+    public void enterUserNameANdPassword() throws InterruptedException {
+
+    pricingPageObjectManager.getPricingHomePage().loginToPricing();
+
+    }
+
+//    public void loginToPricing()  {
 
 
-   String LoginText = pricingPageObjectManager.getPricingHomePage().getSignInTxt().trim();
-   System.out.println("login text: " + LoginText);
-   assertEquals(LoginText, "Sign in");
-   }
+  //      pricingPageObjectManager.getPricingHomePage().loginToPricing();
+    //    System.out.println("login popup");
 
-
+   // }
 
 
 }
