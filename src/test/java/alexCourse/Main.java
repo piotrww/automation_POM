@@ -7,6 +7,8 @@ public class Main {
 
      Mouse1 mouse1 = new Mouse1();
      mouse1.leftClick();
+     mouse1.rightClick();
+     mouse1.jumpFromTable();
 
      System.out.println("Mixed");
 

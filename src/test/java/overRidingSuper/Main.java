@@ -10,6 +10,10 @@ public class Main {
         Daughter daughter = new Daughter();
         daughter.appeal();
         daughter.appealByFather();
+        daughter.appealExtra();
+
+        Father father2 = new Daughter();
+        father2.appeal();
 
 
     }

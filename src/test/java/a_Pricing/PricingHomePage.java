@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -13,6 +14,20 @@ public class PricingHomePage<myElement> extends BasePage {
 
     @FindBy(css = "a#cantAccessAccount")
     private WebElement loginPopUpTextLink;
+
+    @FindBy(css = "input#i0118")
+    private WebElement pInput;
+
+    @FindBy(css = "input#idSIButton9")
+    private WebElement inputSignIn;
+
+    @FindBy(css = "div#consentHeader")
+    private WebElement loginWarningMicrosoft;
+
+    @FindBy(css = ".navbar-nav a")
+    List<WebElement> topMenuTexts;
+
+
 
     // WebElement myElement =  driver.findElement(By.xpath("/button[contains(text(),'Login')]"));
 
@@ -25,7 +40,6 @@ public class PricingHomePage<myElement> extends BasePage {
 
     WebElement myElement = driver.findElement(By.cssSelector(".p-ripple"));
 
-
     public String getSignInTxt() {
 
 
@@ -37,7 +51,7 @@ public class PricingHomePage<myElement> extends BasePage {
 
         myElement.click();
         System.out.println("clicked sign in");
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
         String popupsHandle = driver.getWindowHandle();
         System.out.println("extra windows: " + popupsHandle);
@@ -49,15 +63,43 @@ public class PricingHomePage<myElement> extends BasePage {
                 System.out.println("In If");
                 driver.switchTo().window(extra);
                 System.out.println("switched focus to popup");
-                popupLoginEmail.sendKeys("user@usertest.com");
+
+                Thread.sleep(3000);
+                popupLoginEmail.sendKeys("qlibqaservice@kantar.com");
                 loginNextButton.click();
+
+                //await asynchroniczny, spróbować.
+
+
+                Thread.sleep(2000);
+                pInput.sendKeys("Automation@41");
+
+
+                Thread.sleep(2000);
+                inputSignIn.click();
+                System.out.println("before Microsoft warning");
+                Thread.sleep(2000);
+                System.out.println(loginWarningMicrosoft.getText());
+                inputSignIn.click();
 
             }
         }
-        Thread.sleep(3003);
+        Thread.sleep(3000);
+    }
 
 
-        //System.out.println(loginPopUpTextLink.getText());
+    public void checkMainElementsOfTopMenu() {
+
+
+            List<WebElement> m = driver.findElements(By.cssSelector(".navbar-nav a"));
+            // iterate over list
+            for(int i = 0; i< m.size(); i++) {
+                //obtain text
+                String s = m.get(i).getText();
+                System.out.println("Text is: " + s);
+            }
+
+
     }
 }
 

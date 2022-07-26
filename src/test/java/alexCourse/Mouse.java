@@ -8,7 +8,7 @@ public class Mouse {
     }
 
     public void rightClick() {
-        System.out.println("right clicked");
+        System.out.println("right 00 clicked");
     }
 
     public void scroolUp() {
@@ -19,6 +19,8 @@ public class Mouse {
         System.out.println("scrolled down");
     }
 
+    public void jumpFromTable() {        System.out.println("jumped down from table");
+    }
 
 }
 
